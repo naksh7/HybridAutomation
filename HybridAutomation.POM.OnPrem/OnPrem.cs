@@ -1,0 +1,18 @@
+﻿namespace HybridAutomation.POM.OnPrem
+{
+    public class OnPrem
+    {
+        #region Central
+        private static Notepad? _notepad;
+        public static Notepad Notepad => _notepad ??= new Notepad();               
+        #endregion
+            
+        /// <summary>
+        /// Resets all page object instances. Useful for test cleanup or when starting fresh sessions.
+        /// </summary>
+        public static void ResetAll()
+        {
+            _notepad = null;           
+        }
+    }
+}
